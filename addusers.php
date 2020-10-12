@@ -1,6 +1,6 @@
 <?php 
 include_once("connection.php");
-header('Location: users.php')
+//header('Location: users.php');
 switch($_POST["role"]){
 	case "Pupil":
 		$role=0;
