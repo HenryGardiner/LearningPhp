@@ -46,7 +46,7 @@ CREATE TABLE TblPupilStudies
 (Subjectid INT(4),
 Userid INT(4),
 Classposition INT(2),
-Classgrade  CHAR(1),
+Classgrade CHAR(1),
 Exammark INT(2),
 Comment TEXT,
 PRIMARY KEY(Subjectid,Userid))");
