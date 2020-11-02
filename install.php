@@ -1,4 +1,4 @@
-
+//Do not run this please
 <?php
 $servername = 'localhost';
 $username = 'root';
