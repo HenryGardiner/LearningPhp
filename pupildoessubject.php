@@ -25,7 +25,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 ?>
 </select>
 
-<form action="addtosubjects.php" method = "post">
+<form action="addtosubject.php" method = "post">
   <input type="submit" value="Add to Subject">
 </form>
 </body>

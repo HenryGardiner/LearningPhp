@@ -1,15 +1,15 @@
 <?php 
-header('Location: pupildoessubject.php');
+header('Location:pupildoessubject.php');
 try{
 	include_once("connection.php");
 	array_map("htmlspecialchars", $_POST);
-	$stmt = $conn->prepare("INSERT INTO TblPupilStudies (SubjectID,Subjectname,Teacher)VALUES (null,:subjectname,:teacher)");
-	$stmt->bindParam(':subjectname', $_POST['subjectname']);
-	$stmt->bindParam(':teacher', $_POST['teacher']);
+	$stmt = $conn->prepare("INSERT INTO TblPupilStudies (SubjectID,UserID,Classposition,Classgrade,Exammark,Comment)VALUES (null,null,null,null,null)");
+	$stmt->bindParam(':subjectid', $_POST['subjectid']);
+	$stmt->bindParam(':userid', $_POST['userid']);
 	$stmt->execute();
 	$conn=null;
-	echo $_POST["subjectname"]."<br>";
-	echo $_POST["teacher"]."<br>";
+	echo $_POST["subjectid"]."<br>";
+	echo $_POST["userid"]."<br>";
 	}
 catch(PDOException $e)
 	{
