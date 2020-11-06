@@ -6,7 +6,7 @@
 	$stmt->execute();
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	{
-		echo('<option value='.$row["userID"].'>'.$row["surname"].', '.$row["forename"].'</option>');
+		echo('<option value='.$row["UserID"].'>'.$row["Surname"].', '.$row["Forename"].'</option>');
 	}
 	?>
 	</select>
@@ -17,10 +17,15 @@
 	$stmt->execute();
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	{
-		echo('<option value='.$row["SubjectId"].'>'.$row["Subjectname"].' - '.$row["Teacher"].'</option>');
+		echo('<option value='.$row["SubjectID"].'>'.$row["Subjectname"].' - '.$row["Teacher"].'</option>');
 	}
 	?>
 	</select>
 	<br>
-	<input type="submit" value="Add to Subject">
+	<input onclick="alertfunction()" type="submit" value="Add to Subject">
+	<script>
+	function alertfunction(){
+		alert("Updated")
+	}
+	</script>
 </form>
