@@ -33,7 +33,7 @@ try{
 	echo $_POST["year"]."<br>";
 	echo $_POST["passwd"]."<br>";
 	echo $_POST["role"]."<br>";
-	}
+
 catch(PDOException $e)
 	{
 		echo "error".$e->getMessage();
